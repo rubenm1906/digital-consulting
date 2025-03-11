@@ -130,13 +130,13 @@ function updateLanguage() {
     });
 }
 
-// Scroll Animation
+// Scroll Animation for Individual Sections
 window.addEventListener('scroll', () => {
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach(element => {
         const position = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (position < windowHeight * 0.8) {
+        if (position < windowHeight * 0.9) {
             element.classList.add('visible');
         }
     });
