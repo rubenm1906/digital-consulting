@@ -88,9 +88,8 @@ button:hover {
 .hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: url('../img/hero-bg.jpg') no-repeat center/cover;
+    background-color: #007bff; /* Color de fondo en lugar de imagen */
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
@@ -106,14 +105,15 @@ button:hover {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: #007bff;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #e0e0e0;
 }
 
 /* Sections */
