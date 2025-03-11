@@ -74,22 +74,24 @@ body.dark .nav-links a {
 button {
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #007bff;
+    background-color: #3B82F6; /* Azul claro */
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2563EB; /* Azul más oscuro */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 4rem 2rem;
-    background-color: #007bff; /* Color de fondo en lugar de imagen */
+    padding: 6rem 2rem;
+    background: url('../img/hero-bg.jpg') no-repeat center/cover;
+    background-color: #1E3A8A; /* Azul oscuro */
     color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
@@ -100,20 +102,23 @@ button:hover {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #fff;
-    color: #007bff;
+    background-color: #3B82F6; /* Azul claro */
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #e0e0e0;
+    background-color: #2563EB; /* Azul más oscuro */
 }
 
 /* Sections */
@@ -142,6 +147,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .service-card {
@@ -149,6 +155,7 @@ button:hover {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 body.dark .service-card {
@@ -159,12 +166,12 @@ body.dark .service-card {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
+    background-color: #1E3A8A; /* Azul oscuro */
     color: #fff;
 }
 
 body.dark footer {
-    background-color: #111;
+    background-color: #1A2E5A; /* Azul más oscuro */
 }
 
 /* Responsive */
@@ -181,5 +188,9 @@ body.dark footer {
 
     .hero h1 {
         font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
     }
 }
