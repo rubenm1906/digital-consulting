@@ -108,12 +108,12 @@ button:hover {
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 1.2rem;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
 }
 
@@ -139,21 +139,73 @@ button:hover {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .section {
+    background: #2c2c2c;
 }
 
 .section h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
     color: #1E3A8A;
 }
 
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* About Section */
+.what-we-do {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+body.dark .what-we-do {
+    background: #333;
+}
+
+.what-we-do h3 {
+    font-size: 2rem;
+    color: #1E3A8A;
+    margin-bottom: 1rem;
+}
+
 .what-we-do ul {
     list-style: none;
     margin: 1.5rem 0;
     padding: 0 2rem;
     text-align: left;
     color: #555;
+}
+
+body.dark .what-we-do ul {
+    color: #ccc;
+}
+
+.what-we-do ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.what-we-do .icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
 .mission-vision {
@@ -164,15 +216,16 @@ button:hover {
 }
 
 .mission, .vision {
-    background: #fff;
+    background: #f9f9f9;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    border-left: 5px solid #1E3A8A;
 }
 
 body.dark .mission, body.dark .vision {
-    background: #2c2c2c;
+    background: #333;
 }
 
 .mission:hover, .vision:hover {
@@ -185,8 +238,8 @@ body.dark .mission, body.dark .vision {
     color: #1E3A8A;
 }
 
-.values h3 {
-    font-size: 2rem; /* Aumenté el tamaño del título */
+.values h3, .why-choose-us h3 {
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #1E3A8A;
 }
@@ -198,25 +251,31 @@ body.dark .mission, body.dark .vision {
     margin-top: 1rem;
 }
 
-.values-grid div, .choose-us-grid div {
-    background: #fff;
+.value-card, .choose-card {
+    background: #f9f9f9;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s;
+    border-left: 4px solid #1E3A8A;
 }
 
-body.dark .values-grid div, body.dark .choose-us-grid div {
-    background: #2c2c2c;
+body.dark .value-card, body.dark .choose-card {
+    background: #333;
 }
 
-.values-grid div:hover, .choose-us-grid div:hover {
+.value-card:hover, .choose-card:hover {
     transform: translateY(-5px);
+    background: #e6f0ff;
 }
 
-.values-grid div strong, .choose-us-grid div strong {
+body.dark .value-card:hover, body.dark .choose-card:hover {
+    background: #444;
+}
+
+.value-card strong, .choose-card strong {
     color: #1E3A8A;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Services Section */
@@ -228,7 +287,7 @@ body.dark .values-grid div, body.dark .choose-us-grid div {
 }
 
 .service-card {
-    background: #fff;
+    background: #f9f9f9;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -236,7 +295,7 @@ body.dark .values-grid div, body.dark .choose-us-grid div {
 }
 
 body.dark .service-card {
-    background: #2c2c2c;
+    background: #333;
 }
 
 .service-card:hover {
@@ -259,10 +318,6 @@ body.dark .service-card p {
 }
 
 /* How We Work Section */
-#how-we-work {
-    display: block; /* Asegurando visibilidad */
-}
-
 .work-process {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -271,7 +326,7 @@ body.dark .service-card p {
 }
 
 .process-step {
-    background: #fff;
+    background: #f9f9f9;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -279,7 +334,7 @@ body.dark .service-card p {
 }
 
 body.dark .process-step {
-    background: #2c2c2c;
+    background: #333;
 }
 
 .process-step:hover {
@@ -358,8 +413,8 @@ body.dark footer {
         font-size: 2rem;
     }
 
-    .values h3 {
-        font-size: 1.8rem; /* Ajuste para móviles */
+    .values h3, .why-choose-us h3 {
+        font-size: 1.8rem;
     }
 }
 
