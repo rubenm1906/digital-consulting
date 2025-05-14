@@ -1,150 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiCore Consulting</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiCore Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #1d4ed8;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #1d4ed8;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      background-color: #fff;
+      color: #1e3a8a;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1d4ed8;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">DigiCore Consulting</div>
-            <ul class="nav-links">
-                <li><a href="#home" data-lang="home">Inicio</a></li>
-                <li><a href="#about" data-lang="about">Sobre Nosotros</a></li>
-                <li><a href="#services" data-lang="services">Servicios</a></li>
-                <li><a href="#how-we-work" data-lang="how-we-work">Cómo Trabajamos</a></li>
-                <li><a href="#contact" data-lang="contact">Contacto</a></li>
-            </ul>
-            <div class="controls">
-                <button id="toggle-theme">🌙</button>
-                <button id="toggle-lang">EN/ES</button>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">DigiCore</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-lang="hero-title">Liderando la Transformación Digital</h1>
-            <p data-lang="hero-subtitle">Más de 16 años impulsando negocios con tecnología avanzada y soluciones innovadoras.</p>
-            <a href="#contact" class="btn" data-lang="hero-btn">Solicita una Consulta</a>
-        </div>
-    </section>
+  <section class="hero">
+    <h1>Impulsamos la digitalización de tu negocio</h1>
+    <p>Consultoría en automatización, analítica y soluciones web para pequeñas empresas.</p>
+    <a href="#contact" class="btn">Solicita tu diagnóstico gratuito</a>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 data-lang="about-title">Sobre Nosotros</h2>
-        <p data-lang="about-desc">En <strong>DigiCore Consulting</strong>, somos una empresa líder en consultoría de transformación digital y automatización. Nos apasiona ayudar a pequeñas y medianas empresas a optimizar sus operaciones, elevar su presencia digital y aprovechar el poder de la inteligencia artificial para alcanzar nuevos horizontes.</p>
-        
-        <div class="what-we-do animate-on-scroll">
-            <h3 data-lang="what-we-do-title">¿Qué hacemos?</h3>
-            <ul data-lang="what-we-do-list">
-                <li><span class="icon">💻</span> Diseñamos soluciones tecnológicas personalizadas para digitalizar procesos y mejorar la eficiencia.</li>
-                <li><span class="icon">🤖</span> Implementamos inteligencia artificial y automatización para optimizar costos y rendimiento.</li>
-                <li><span class="icon">🔗</span> Mejoramos la integración entre herramientas digitales para maximizar su impacto en tu negocio.</li>
-            </ul>
-        </div>
-        
-        <div class="mission-vision animate-on-scroll">
-            <div class="mission">
-                <h3 data-lang="mission-title">Nuestra Misión</h3>
-                <p data-lang="mission-desc">Empoderar a los negocios con tecnología avanzada, permitiéndoles escalar, aumentar su productividad y destacarse en un mundo digital en constante cambio.</p>
-            </div>
-            <div class="vision">
-                <h3 data-lang="vision-title">Nuestra Visión</h3>
-                <p data-lang="vision-desc">Convertirnos en referentes globales en transformación digital y automatización, ofreciendo soluciones accesibles que impulsen el crecimiento sostenible de las empresas.</p>
-            </div>
-        </div>
-        
-        <div class="values animate-on-scroll">
-            <h3 data-lang="values-title">Nuestros Valores</h3>
-            <div class="values-grid">
-                <div class="value-card"><strong data-lang="value-innov">Innovación</strong><br>Estamos a la vanguardia de las soluciones digitales y de automatización.</div>
-                <div class="value-card"><strong data-lang="value-eff">Eficiencia</strong><br>Diseñamos sistemas que ahorran tiempo y recursos valiosos.</div>
-                <div class="value-card"><strong data-lang="value-acc">Accesibilidad</strong><br>Ofrecemos tecnología adaptable a empresas de cualquier tamaño.</div>
-                <div class="value-card"><strong data-lang="value-qual">Calidad y Soporte</strong><br>Acompañamos a nuestros clientes en cada paso del camino.</div>
-            </div>
-        </div>
-        
-        <div class="why-choose-us animate-on-scroll">
-            <h3 data-lang="why-choose-us-title">¿Por qué elegir DigiCore?</h3>
-            <div class="choose-us-grid">
-                <div class="choose-card"><strong>Soluciones a Medida</strong><br>Cada proyecto se adapta a las necesidades únicas de tu negocio.</div>
-                <div class="choose-card"><strong>Implementación Sencilla</strong><br>Integración de tecnología sin complicaciones ni interrupciones.</div>
-                <div class="choose-card"><strong>Inteligencia Artificial</strong><br>Usamos IA para impulsar tu crecimiento de forma innovadora.</div>
-                <div class="choose-card"><strong>Soporte Experto</strong><br>Asesoría continua para maximizar el impacto de tu digitalización.</div>
-            </div>
-        </div>
-    </section>
+  <section class="section" id="about">
+    <h2>¿Quiénes Somos?</h2>
+    <p>Somos un equipo apasionado por la tecnología, enfocados en transformar procesos manuales en soluciones digitales eficientes. Con más de 15 años de experiencia combinada, ofrecemos acompañamiento personalizado a cada cliente.</p>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section animate-on-scroll">
-        <h2 data-lang="services-title">Nuestros Servicios</h2>
-        <p data-lang="services-intro">Transformamos tu negocio con soluciones tecnológicas avanzadas, desde el desarrollo web hasta la inteligencia artificial, optimizando cada proceso para tu éxito.</p>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3 data-lang="service-web">Desarrollo de Páginas Web y Presencia Digital</h3>
-                <p data-lang="service-web-desc">Creamos sitios web personalizados (corporativos, e-commerce, landing pages) con funcionalidades como chatbots y SEO integrado para destacar en línea.</p>
-            </div>
-            <div class="service-card">
-                <h3 data-lang="service-auto">Automatización de Procesos y Gestión de Datos</h3>
-                <p data-lang="service-auto-desc">Implementamos soluciones como lectura de facturas con IA y automatización de flujos de trabajo para aumentar tu productividad.</p>
-            </div>
-            <div class="service-card">
-                <h3 data-lang="service-soft">Desarrollo de Software y Soluciones In-House</h3>
-                <p data-lang="service-soft-desc">Desarrollamos aplicaciones web y software a medida para optimizar tus operaciones internas.</p>
-            </div>
-            <div class="service-card">
-                <h3 data-lang="service-data">Analítica de Datos e Inteligencia de Negocios</h3>
-                <p data-lang="service-data-desc">Creamos dashboards interactivos con Power BI y Tableau para decisiones basadas en datos reales.</p>
-            </div>
-            <div class="service-card">
-                <h3 data-lang="service-int">Integraciones y Conectividad de Sistemas</h3>
-                <p data-lang="service-int-desc">Conectamos CRMs, ERPs y e-commerce con automatización avanzada para flujos de trabajo eficientes.</p>
-            </div>
-            <div class="service-card">
-                <h3 data-lang="service-ai">Automatización con Inteligencia Artificial</h3>
-                <p data-lang="service-ai-desc">Desplegamos asistentes virtuales y optimizamos procesos con IA para reducir costos y mejorar resultados.</p>
-            </div>
-        </div>
-    </section>
+  <section class="section" id="services">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Desarrollo Web</h3>
+        <p>Landing pages, tiendas online y sitios corporativos con diseño moderno y enfoque en conversión.</p>
+      </div>
+      <div class="card">
+        <h3>Automatización de Procesos</h3>
+        <p>Desde la lectura de facturas hasta el registro automático de datos en sistemas internos.</p>
+      </div>
+      <div class="card">
+        <h3>Asistentes Inteligentes</h3>
+        <p>Integración de chatbots, WhatsApp y asistentes AI para escalar tu atención al cliente.</p>
+      </div>
+      <div class="card">
+        <h3>Analítica de Negocio</h3>
+        <p>Dashboards e informes dinámicos para tomar decisiones con base en tus datos reales.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- How We Work Section -->
-    <section id="how-we-work" class="section animate-on-scroll">
-        <h2 data-lang="how-we-work-title">Cómo Trabajamos</h2>
-        <p data-lang="how-we-work-desc">En <strong>DigiCore Consulting</strong>, seguimos un proceso claro y colaborativo para transformar tu negocio:</p>
-        <div class="work-process">
-            <div class="process-step">
-                <h3 data-lang="process-1">1. Diagnóstico Inicial</h3>
-                <p data-lang="process-1-desc">Evaluamos tus necesidades y oportunidades de mejora con un análisis profundo.</p>
-            </div>
-            <div class="process-step">
-                <h3 data-lang="process-2">2. Desarrollo e Implementación</h3>
-                <p data-lang="process-2-desc">Diseñamos e integramos soluciones personalizadas con precisión y eficiencia.</p>
-            </div>
-            <div class="process-step">
-                <h3 data-lang="process-3">3. Capacitación y Soporte</h3>
-                <p data-lang="process-3-desc">Te capacitamos y ofrecemos soporte continuo para garantizar tu éxito a largo plazo.</p>
-            </div>
-        </div>
-    </section>
+  <section class="section" id="contact">
+    <h2>Contáctanos</h2>
+    <p>¿Listo para digitalizar tu negocio? Escríbenos y empieza hoy mismo.</p>
+    <p><a href="mailto:info@digicoreconsulting.com" style="color:#1e3a8a; font-weight: bold;">info@digicoreconsulting.com</a></p>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section animate-on-scroll">
-        <h2 data-lang="contact-title">Contáctanos</h2>
-        <p data-lang="contact-desc">Estamos listos para impulsar tu digitalización. ¡Agenda tu consulta gratuita hoy!</p>
-        <a href="mailto:info@digicoreconsulting.com" class="btn" data-lang="contact-btn">Enviar Mensaje</a>
-        <p data-lang="contact-info">Correo: <a href="mailto:info@digicoreconsulting.com">info@digicoreconsulting.com</a> | Teléfono: +1-800-DIGICORE</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 DigiCore Consulting. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <footer>
+    <p>© 2025 DigiCore Consulting - Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
